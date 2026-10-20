@@ -1,0 +1,26 @@
+{
+  "name": "dubber-studio",
+  "version": "2.0.0",
+  "description": "Dubber Studio - Web Voice Cloning & AI Dubbing Platform",
+  "main": "test_server.js",
+  "scripts": {
+    "start": "node test_server.js",
+    "test": "node --check desktop-web-bridge.js",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "dubber-studio",
+    "voice-cloning",
+    "ai-dubbing",
+    "tts",
+    "khmer-tts",
+    "edge-tts",
+    "subtitles",
+    "github-pages"
+  ],
+  "author": "Dubber Studio Team",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "realistic",
+      "label": "Realistic",
+      "items": [
+        {
+          "file": "realistic/wanderlust-host.mp4",
+          "poster": "realistic/wanderlust-host.jpg",
+          "name": "Wanderlust host"
+        },
+        {
+          "file": "realistic/arty-host.mp4",
+          "poster": "realistic/arty-host.jpg",
+          "name": "Arty host"
+        },
+        {
+          "file": "realistic/studio-host.mp4",
+          "poster": "realistic/studio-host.jpg",
+          "name": "Studio host"
+        },
+        {
+          "file": "realistic/studio-presenter.mp4",
+          "poster": "realistic/studio-presenter.jpg",
+          "name": "Studio presenter"
+        }
+      ]
+    },
+    {
+      "id": "cartoon",
+      "label": "Cartoon",
+      "items": [
+        {
+          "file": "cartoon/floral-creator.mp4",
+          "poster": "cartoon/floral-creator.jpg",
+          "name": "Floral creator"
+        },
+        {
+          "file": "cartoon/tech-creator.mp4",
+          "poster": "cartoon/tech-creator.jpg",
+          "name": "Tech creator"
+        },
+        {
+          "file": "cartoon/soft-creator.mp4",
+          "poster": "cartoon/soft-creator.jpg",
+          "name": "Soft-tone creator"
+        },
+        {
+          "file": "cartoon/everyday-creator.mp4",
+          "poster": "cartoon/everyday-creator.jpg",
+          "name": "Everyday creator"
+        },
+        {
+          "file": "cartoon/news-anchor.mp4",
+          "poster": "cartoon/news-anchor.jpg",
+          "name": "News anchor"
+        },
+        {
+          "file": "cartoon/business-host.mp4",
+          "poster": "cartoon/business-host.jpg",
+          "name": "Business host"
+        }
+      ]
+    },
+    {
+      "id": "anime",
+      "label": "Anime",
+      "items": [
+        {
+          "file": "anime/kawaii-streamer.mp4",
+          "poster": "anime/kawaii-streamer.jpg",
+          "name": "Kawaii streamer"
+        },
+        {
+          "file": "anime/anime-host.mp4",
+          "poster": "anime/anime-host.jpg",
+          "name": "Anime host"
+        }
+      ]
+    }
+  ]
+}

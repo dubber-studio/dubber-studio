@@ -1,0 +1,57 @@
+Bundled default voice profiles
+==============================
+
+Built 2026-09-04 by scripts/build-voice-profiles.mjs.
+33 reference clips, 18.25 MB.
+
+What these are
+--------------
+Short reference recordings the local VoxCPM2 server clones from. They ship so a new install can
+dub immediately instead of opening an empty Voice Profiles panel. The app reads them in place
+from this directory and never copies them into the customer's data folder.
+
+Where they came from
+--------------------
+Collected by the developer from their own media library and imported into the development
+build's voice bank one at a time. They are recordings of real human voices. No per-clip release
+or consent record accompanies them, and shipping them redistributes those voices to every
+customer. That is a known and accepted exposure, recorded here so it is not discovered later.
+
+Replacing a voice is a source change and a rebuild: swap the clip in the development bank and
+re-run `npm run assets:voice-profiles`. Nothing in the app pins a clip by content.
+
+Per-clip record
+---------------
+male-1.wav  Male 1 (male, 6.4s)  source: 
+female-1.wav  Female 1 (female, 5.6s)  source: 
+neighboor.mp3  Neighboor (female, 5.3s)  source: 
+toddler-3-yrs.wav  Toddler (3 yrs) (female, 7.7s)  source: 
+male-2.wav  Male 2 (male, 3.4s)  source: 
+actress-1.wav  Actress 1 (female, 7.0s)  source: 
+actress-2.wav  Actress 2 (female, 8.2s)  source: 
+actress-3.wav  Actress 3 (female, 6.4s)  source: 
+actress-4.wav  Actress 4 (female, 5.8s)  source: 
+aunt.wav  Aunt (female, 7.4s)  source: 
+cocky-male-friend.wav  Cocky Male Friend (male, 3.8s)  source: 
+confident-man.wav  Confident Man (male, 6.4s)  source: 
+calm-woman.wav  Calm Woman (female, 6.7s)  source: 
+female-friend-2.wav  Female Friend 2 (female, 6.6s)  source: 
+calm-man.wav  Calm Man (male, 9.1s)  source: 
+male-friend.wav  Male Friend (male, 3.7s)  source: 
+mom.wav  Mom (female, 8.6s)  source: 
+old-woman.wav  Old Woman (female, 7.5s)  source: 
+dad-old-man.wav  Dad / Old Man (male, 4.8s)  source: 
+young-brother.wav  Young Brother (male, 3.4s)  source: 
+younger-sister.wav  Younger Sister (female, 5.3s)  source: 
+female.wav  Female (female, 4.0s)  source: 
+man.wav  Man (male, 3.8s)  source: 
+old-man.wav  Old Man (male, 6.9s)  source: 
+young-prince.wav  Young Prince (male, 5.6s)  source: 
+story-teller-man2.wav  story-teller-man2 (male, 4.3s)  source: 
+sweet-girl-voice.wav  sweet-girl-voice (female, 8.0s)  source: 
+ក្មេង4.wav  ក្មេង4 (male, 5.6s)  source: 
+តួ-ព្រះនាង.wav  តួ ព្រះនាង (female, 6.1s)  source: 
+ព្រះនាងធំ.wav  ព្រះនាងធំ (female, 8.2s)  source: 
+យាយចាស់.wav  យាយចាស់ (female, 6.7s)  source: 
+អាម៉ាត.wav  អាម៉ាត (male, 8.8s)  source: 
+អ្នកបម្រើប្រុស.wav  អ្នកបម្រើប្រុស (male, 6.2s)  source: 

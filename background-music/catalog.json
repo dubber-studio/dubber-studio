@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "story",
+      "label": "Story narration",
+      "items": [
+        {
+          "file": "story/Black Glass Corridor.mp3",
+          "name": "Black Glass Corridor"
+        },
+        {
+          "file": "story/Blackout Pursuit.mp3",
+          "name": "Blackout Pursuit"
+        },
+        {
+          "file": "story/Deep Space Drift.mp3",
+          "name": "Deep Space Drift"
+        },
+        {
+          "file": "story/Mosslight Gate.mp3",
+          "name": "Mosslight Gate"
+        },
+        {
+          "file": "story/Open Meadow Drift.mp3",
+          "name": "Open Meadow Drift"
+        },
+        {
+          "file": "story/Paper Lanterns.mp3",
+          "name": "Paper Lanterns"
+        },
+        {
+          "file": "story/Skybreak Overture.mp3",
+          "name": "Skybreak Overture"
+        },
+        {
+          "file": "story/Skyforge Ascendant.mp3",
+          "name": "Skyforge Ascendant"
+        },
+        {
+          "file": "story/Smoke In The Files.mp3",
+          "name": "Smoke In The Files"
+        },
+        {
+          "file": "story/Velvet Horizon.mp3",
+          "name": "Velvet Horizon"
+        }
+      ]
+    }
+  ]
+}

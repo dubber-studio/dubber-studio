@@ -1,0 +1,299 @@
+[
+  {
+    "id": "default-male-1",
+    "name": "Male 1",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "male-1.wav",
+    "size": 614444,
+    "durationMs": 6400
+  },
+  {
+    "id": "default-female-1",
+    "name": "Female 1",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "female-1.wav",
+    "size": 537644,
+    "durationMs": 5600
+  },
+  {
+    "id": "default-neighboor",
+    "name": "Neighboor",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "neighboor.mp3",
+    "size": 127318,
+    "durationMs": 5303
+  },
+  {
+    "id": "default-toddler-3-yrs",
+    "name": "Toddler (3 yrs)",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "toddler-3-yrs.wav",
+    "size": 737324,
+    "durationMs": 7680
+  },
+  {
+    "id": "default-male-2",
+    "name": "Male 2",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "male-2.wav",
+    "size": 322604,
+    "durationMs": 3360
+  },
+  {
+    "id": "default-actress-1",
+    "name": "Actress 1",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "actress-1.wav",
+    "size": 675884,
+    "durationMs": 7040
+  },
+  {
+    "id": "default-actress-2",
+    "name": "Actress 2",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "actress-2.wav",
+    "size": 783404,
+    "durationMs": 8160
+  },
+  {
+    "id": "default-actress-3",
+    "name": "Actress 3",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "actress-3.wav",
+    "size": 614444,
+    "durationMs": 6400
+  },
+  {
+    "id": "default-actress-4",
+    "name": "Actress 4",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "actress-4.wav",
+    "size": 553004,
+    "durationMs": 5760
+  },
+  {
+    "id": "default-aunt",
+    "name": "Aunt",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "aunt.wav",
+    "size": 706604,
+    "durationMs": 7360
+  },
+  {
+    "id": "default-cocky-male-friend",
+    "name": "Cocky Male Friend",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "cocky-male-friend.wav",
+    "size": 368684,
+    "durationMs": 3840
+  },
+  {
+    "id": "default-confident-man",
+    "name": "Confident Man",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "confident-man.wav",
+    "size": 614444,
+    "durationMs": 6400
+  },
+  {
+    "id": "default-calm-woman",
+    "name": "Calm Woman",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "calm-woman.wav",
+    "size": 645164,
+    "durationMs": 6720
+  },
+  {
+    "id": "default-female-friend-2",
+    "name": "Female Friend 2",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "female-friend-2.wav",
+    "size": 629804,
+    "durationMs": 6560
+  },
+  {
+    "id": "default-calm-man",
+    "name": "Calm Man",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "calm-man.wav",
+    "size": 875564,
+    "durationMs": 9120
+  },
+  {
+    "id": "default-male-friend",
+    "name": "Male Friend",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "male-friend.wav",
+    "size": 353324,
+    "durationMs": 3680
+  },
+  {
+    "id": "default-mom",
+    "name": "Mom",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "mom.wav",
+    "size": 829484,
+    "durationMs": 8640
+  },
+  {
+    "id": "default-old-woman",
+    "name": "Old Woman",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "old-woman.wav",
+    "size": 721964,
+    "durationMs": 7520
+  },
+  {
+    "id": "default-dad-old-man",
+    "name": "Dad / Old Man",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "dad-old-man.wav",
+    "size": 460844,
+    "durationMs": 4800
+  },
+  {
+    "id": "default-young-brother",
+    "name": "Young Brother",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "young-brother.wav",
+    "size": 322604,
+    "durationMs": 3360
+  },
+  {
+    "id": "default-younger-sister",
+    "name": "Younger Sister",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "younger-sister.wav",
+    "size": 506924,
+    "durationMs": 5280
+  },
+  {
+    "id": "default-female",
+    "name": "Female",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "female.wav",
+    "size": 384044,
+    "durationMs": 4000
+  },
+  {
+    "id": "default-man",
+    "name": "Man",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "man.wav",
+    "size": 368684,
+    "durationMs": 3840
+  },
+  {
+    "id": "default-old-man",
+    "name": "Old Man",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "old-man.wav",
+    "size": 660524,
+    "durationMs": 6880
+  },
+  {
+    "id": "default-young-prince",
+    "name": "Young Prince",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "young-prince.wav",
+    "size": 537644,
+    "durationMs": 5600
+  },
+  {
+    "id": "default-story-teller-man2",
+    "name": "story-teller-man2",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "story-teller-man2.wav",
+    "size": 414764,
+    "durationMs": 4320
+  },
+  {
+    "id": "default-sweet-girl-voice",
+    "name": "sweet-girl-voice",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "sweet-girl-voice.wav",
+    "size": 768044,
+    "durationMs": 8000
+  },
+  {
+    "id": "default-ក្មេង4",
+    "name": "ក្មេង4",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "ក្មេង4.wav",
+    "size": 537644,
+    "durationMs": 5600
+  },
+  {
+    "id": "default-តួ-ព្រះនាង",
+    "name": "តួ ព្រះនាង",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "តួ-ព្រះនាង.wav",
+    "size": 583724,
+    "durationMs": 6080
+  },
+  {
+    "id": "default-ព្រះនាងធំ",
+    "name": "ព្រះនាងធំ",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "ព្រះនាងធំ.wav",
+    "size": 783404,
+    "durationMs": 8160
+  },
+  {
+    "id": "default-យាយចាស់",
+    "name": "យាយចាស់",
+    "gender": "female",
+    "controlInstruction": "",
+    "file": "យាយចាស់.wav",
+    "size": 645164,
+    "durationMs": 6720
+  },
+  {
+    "id": "default-អាម៉ាត",
+    "name": "អាម៉ាត",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "អាម៉ាត.wav",
+    "size": 844844,
+    "durationMs": 8800
+  },
+  {
+    "id": "default-អ្នកបម្រើប្រុស",
+    "name": "អ្នកបម្រើប្រុស",
+    "gender": "male",
+    "controlInstruction": "",
+    "file": "អ្នកបម្រើប្រុស.wav",
+    "size": 599084,
+    "durationMs": 6240
+  }
+]

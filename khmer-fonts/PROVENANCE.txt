@@ -1,0 +1,21 @@
+Khmer Poster Type Lab font set
+
+Copied from: C:\Users\Lenovo\Pictures\Khmer-Font-Collection
+Files: 1542    Size: 437 MiB
+Copied on: 2026-08-27
+
+Regenerate with `npm run assets:khmer-fonts`. `index.json` is copied from the collection's own
+fonts.json, which its build-index.js derives from filenames and its check-coverage.js enriches
+with Khmer-block coverage (`k`) and the legacy-Limon flag (`L`) by parsing each font's cmap.
+
+LICENSING — READ BEFORE SHIPPING
+This set was bulk-collected from khmerfonts.info, an index site rather than a licensing channel,
+and it carries no per-font licence record. A scan of the OpenType `name` tables found roughly 157
+files declaring the SIL Open Font Licence, ~759 asserting "All rights reserved", and ~400
+mentioning "commercial" — frequently in a "free for personal use, contact the author for
+commercial use" clause. The remainder declare nothing machine-readable.
+
+Redistribution rights for the bulk of these faces are therefore unverified. Narrowing to a
+cleared subset is a data change and nothing more: drop the unwanted entries from the collection,
+re-run its build-index.js and check-coverage.js, and re-run this script. No app code, schema or
+interface depends on which faces are present.
