@@ -3,13 +3,13 @@
 > **Web Voice Cloning & AI Dubbing Platform**  
 > បំប្លែងពីកម្មវិធីកុំព្យូទ័រទៅជា Web Version ដំណើរការផ្ទាល់លើ Browser និងអាច Deploy ទៅកាន់ GitHub Pages បានភ្លាមៗ!
 
-![Dubber Studio Banner](./assets/cover-studio-C1LkVHMJ.png)
+![Dubber Studio Live UI](./screenshot.png)
 
 ---
 
 ## 🌟 អំពី Dubber Studio (Overview)
 
-**Dubber Studio** គឺជាកំណែ Web Version ពេញលេញដែលត្រូវបានបំប្លែងចេញពីកម្មវិធី **Dubber បីសាច [ Clone សម្លេង Pro ].exe**។ កំណែ Web នេះដំណើរការដោយផ្ទាល់នៅលើ Browser (Client-side) ដោយមិនចាំបាច់មាន Backend Server ស្មុគស្មាញឡើយ ហើយអាចបង្ហោះ (Hosting) ដោយផ្ទាល់នៅលើ **GitHub Pages** បានដោយឥតគិតថ្លៃ ១០០%។
+**Dubber Studio** គឺជាកំណែ Web Version ពេញលេញដែលត្រូវបានបំប្លែងចេញពីកម្មវិធី **Dubber បីសាច [ Clone សម្លេង Pro ]**។ កំណែ Web នេះដំណើរការដោយផ្ទាល់នៅលើ Browser (Client-side) ដោយមិនចាំបាច់មាន Backend Server ស្មុគស្មាញឡើយ ហើយអាចបង្ហោះ (Hosting) ដោយផ្ទាល់នៅលើ **GitHub Pages** បានដោយឥតគិតថ្លៃ ១០០%។
 
 ---
 

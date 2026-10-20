@@ -13384,7 +13384,7 @@ function batchCutOutcome(done, failed, cancelled, total) {
   const detail = failed.length ? `${failed.length} could not be cut: ${failed.map((item) => item.error ? `${item.label} (${item.error})` : item.label).join("; ")}` : void 0;
   return { ok: done > 0 && !failed.length, message, detail };
 }
-const LICENSING_ENABLED = true;
+const LICENSING_ENABLED = false;
 const PROJECT_EXT = "ddproj";
 const SESSION_EXT = "ddsession";
 const MAX_NAME_LENGTH = 80;
@@ -36912,7 +36912,7 @@ function stageRunningLabel(stage) {
 const livePercent = (episodeId, live) => live && live.episodeId === episodeId ? live.percent : void 0;
 const shownStages = (autoMerge) => autoMerge ? [...COOK_STAGES, "export"] : COOK_STAGES;
 function dockRows(episodes, bgm, live = {}) {
-  const byPath = new Map(bgm.tasks.map((task) => [task.videoPath, task]));
+  const byPath = new Map(((bgm?.tasks) || []).map((task) => [task.videoPath, task]));
   return episodes.map((episode, index) => {
     const videoPath = episode.manifest.video?.path;
     const task = videoPath ? byPath.get(videoPath) : void 0;
@@ -45680,7 +45680,7 @@ ${canvasFrame.imageBottom?.path ?? ""}` : void 0;
           }
         ),
         licenceGate.pending && /* @__PURE__ */ jsxRuntimeExports.jsx(LicenceCheckDialog, { action: licenceGate.pending.action, onResolve: licenceGate.pending.resolve }),
-        (bootHeld || !licence || !licence.entitlement.licensed) && // Withholding the summary for the length of the hold is what keeps the splash up: the gate
+        (LICENSING_ENABLED && (bootHeld || !licence || !licence.entitlement.licensed)) && // Withholding the summary for the length of the hold is what keeps the splash up: the gate
         // draws the form only once it has one.
         /* @__PURE__ */ jsxRuntimeExports.jsx(ActivationGate, { summary: bootHeld ? void 0 : licence, onUnlocked: () => void finishActivation() })
       ]

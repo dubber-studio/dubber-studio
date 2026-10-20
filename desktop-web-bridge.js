@@ -1637,6 +1637,36 @@
 
   // Complete window.desktop API implementation
   const desktop = {
+    // Extra Web Event Listeners & Handlers
+    onFilesDropped: (fn) => {
+      listeners.filesDropped = listeners.filesDropped || new Set();
+      listeners.filesDropped.add(fn);
+      return () => listeners.filesDropped.delete(fn);
+    },
+    onOpenProjectFile: (fn) => () => {},
+    onCloneProgress: (fn) => () => {},
+    onVoiceCaptureProgress: (fn) => () => {},
+    onSeparationQueueState: (fn) => {
+      listeners.separationQueueState = listeners.separationQueueState || new Set();
+      listeners.separationQueueState.add(fn);
+      return () => listeners.separationQueueState.delete(fn);
+    },
+    autosaveProject: async (data) => {
+      setStorage('autosave', data);
+      return { ok: true };
+    },
+    cancelSeparation: async () => ({ ok: true }),
+    enqueueSeparations: async () => ({ ok: true }),
+    exportFrame: async () => ({ ok: true }),
+    exportVideo: async () => ({ ok: true }),
+    getVoiceGroups: async () => [],
+    saveVoiceGroups: async () => ({ ok: true }),
+    importPaths: async (paths) => ({ ok: true, imported: paths || [] }),
+    openProjectPath: async (p) => null,
+    retrySeparation: async () => ({ ok: true }),
+    separatePreviewStem: async () => null,
+    voiceCaptureSource: async () => null,
+
     // 1. LICENSING (Always Active Lifetime Pro)
     describeLicence: async () => ({
       entitlement: {
@@ -1734,7 +1764,10 @@
         serverUrl: 'https://dubber-studio.local/',
         pythonPath: '',
         appPath: '',
-        profiles: [...BUNDLED_PROFILES, ...customProfiles]
+        profiles: [...BUNDLED_PROFILES, ...customProfiles],
+        runtimeDevice: 'cpu',
+        ditSteps: 10,
+        keepOriginalVoice: true
       };
     },
     saveVoxCmp2Settings: async (settings) => {
@@ -1759,7 +1792,7 @@
     }),
     getVoxCmp2Preflight: async () => ({ ok: true }),
     testVoxCmp2Connection: async () => ({ ok: true, latencyMs: 12 }),
-    getVoxCmp2Server: async () => ({ running: true, port: 8808 }),
+    getVoxCmp2Server: async () => ({ state: 'ready', running: true, port: 8808 }),
     startVoxCmp2Server: async () => ({ ok: true }),
     stopVoxCmp2Server: async () => ({ ok: true }),
     clearVoxCmp2Logs: async () => ({ ok: true }),
@@ -2227,7 +2260,7 @@
     listRecentFiles: async () => [],
     clearRecentFiles: async () => ({ ok: true }),
     takePendingOpen: async () => null,
-    separationQueueState: async () => ({ queue: [] }),
+    separationQueueState: async () => ({ tasks: [] }),
     separatorAvailable: async () => false,
     retryAllSeparations: async () => ({ ok: true }),
     renderPitchPreview: async () => ({ ok: true }),
@@ -2302,8 +2335,46 @@
     }).join('\n');
   }
 
+  
+  // Proxy wrapper to prevent any missing method from ever throwing an error
+  const desktopProxy = new Proxy(desktop, {
+    get(target, prop) {
+      if (prop in target) {
+        return target[prop];
+      }
+      if (typeof prop === 'string') {
+        if (prop.startsWith('on')) {
+          return (callback) => {
+            if (!listeners[prop]) listeners[prop] = new Set();
+            if (typeof callback === 'function') listeners[prop].add(callback);
+            return () => {
+              if (listeners[prop]) listeners[prop].delete(callback);
+            };
+          };
+        }
+        return async (...args) => {
+          console.warn('[Dubber Bridge Proxy Fallback]', prop, args);
+          return { ok: true };
+        };
+      }
+      return undefined;
+    }
+  });
+
+  // Browser Drag and Drop Support
+  window.addEventListener('dragover', (e) => e.preventDefault());
+  window.addEventListener('drop', (e) => {
+    e.preventDefault();
+    if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length) {
+      const files = Array.from(e.dataTransfer.files);
+      const fileUrls = files.map(f => URL.createObjectURL(f));
+      emit('filesDropped', fileUrls);
+    }
+  });
+
   // Expose to window
-  window.desktop = desktop;
+  window.desktop = desktopProxy;
+
   window.electron = {
     ipcRenderer: {
       invoke: async (channel, ...args) => {
