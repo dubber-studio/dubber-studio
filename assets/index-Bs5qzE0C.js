@@ -33353,8 +33353,9 @@ function VoxCmp2SettingsPanel() {
   const [profileFilter, setProfileFilter] = reactExports.useState("");
   const shownProfiles = reactExports.useMemo(() => {
     const needle = profileFilter.trim().toLowerCase();
-    return needle ? settings.profiles.filter((profile) => profile.name.toLowerCase().includes(needle)) : settings.profiles;
-  }, [settings.profiles, profileFilter]);
+    const profs = Array.isArray(settings?.profiles) ? settings.profiles : [];
+    return needle ? profs.filter((profile) => profile.name.toLowerCase().includes(needle)) : profs;
+  }, [settings?.profiles, profileFilter]);
   const [editing, setEditing] = reactExports.useState();
   const [pendingDelete, setPendingDelete] = reactExports.useState();
   const audioRef = reactExports.useRef(null);
@@ -34479,8 +34480,9 @@ function PronunciationPanel({ cues, dubLanguage: dubLanguage2, onRegenerate }) {
     let cancelled = false;
     window.desktop.getPronunciation().then((dictionary) => {
       if (cancelled) return;
-      setEntries(dictionary.entries);
-      baseline.current = new Map(cues.filter((cue) => cue.dubAudio).map((cue) => [cue.id, applyPronunciations(cue.text, dictionary.entries)]));
+      const dictEntries = Array.isArray(dictionary?.entries) ? dictionary.entries : [];
+      setEntries(dictEntries);
+      baseline.current = new Map(cues.filter((cue) => cue.dubAudio).map((cue) => [cue.id, applyPronunciations(cue.text, dictEntries)]));
       setLoaded(true);
     }).catch((failure) => {
       if (!cancelled) {
@@ -35652,10 +35654,10 @@ function SettingsModal({
                         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { children: "Google Gemini" }),
                         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Transcription & translation" })
                       ] }),
-                      settings.hasGeminiKey && /* @__PURE__ */ jsxRuntimeExports.jsxs("em", { children: [
-                        settings.geminiKeys.length,
+                      settings?.hasGeminiKey && /* @__PURE__ */ jsxRuntimeExports.jsxs("em", { children: [
+                        (settings?.geminiKeys || []).length,
                         " ",
-                        settings.geminiKeys.length === 1 ? "key" : "keys"
+                        (settings?.geminiKeys || []).length === 1 ? "key" : "keys"
                       ] })
                     ] }),
                     /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { children: [
@@ -35683,7 +35685,7 @@ function SettingsModal({
                         ] })
                       ] })
                     ] }),
-                    settings.geminiKeys.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "key-list", children: settings.geminiKeys.map((key, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "key-row ready", children: [
+                    (settings?.geminiKeys || []).length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "key-list", children: (settings?.geminiKeys || []).map((key, index) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "key-row ready", children: [
                       /* @__PURE__ */ jsxRuntimeExports.jsx(KeyRound, { size: 15 }),
                       /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "key-label", children: [
                         "Key ",
